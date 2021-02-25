@@ -244,7 +244,7 @@ public class Post {
         return postDonut;
     }
 
-    public void setPostDonut(PostDonut postDonut) {
+    public void setPostDonut(PostDonut postDonut) {git
         this.postDonut = postDonut;
     }
 
