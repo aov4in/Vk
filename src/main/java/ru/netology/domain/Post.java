@@ -12,14 +12,25 @@ public class Post {
     private int friendsOnly;
     private String PostType;
     private int signerId;
-    private int canPin;
-    private int canDelete;
-    private int canEdit;
-    private int isPinned;
+    private boolean canPin;
+    private boolean canDelete;
+    private boolean canEdit;
+    private boolean isPinned;
     private int markedAsAds;
     private boolean isFavorite;
     private boolean postIsFavorite;
     private int postponedId;
+
+    private PostComments postComment; //объект с информацией о комментариях к записи
+    private PostCopyright postCopyright;//объект с информацией об источнике материала(записи)
+    private PostLikes postLike; //объект с информацией о лайках к записи
+    private PostRepost postRepost;//объект с информацией о репостах записи («Рассказать друзьям»)
+    private PostViews postViews;//объект с информацией о просмотрах записи
+    private PostSource postSource;//объект с информацией о способе размещения записи
+    //    private PostAttachments postAttachment;//объект с информацией о медиа вложениях записи, (array)
+    private PostGeo postGeo; //объект с информацией о местоположении
+    //    private PostCopyHistory; //массив, содержащий историю репостов для записи (array)
+    private PostDonut postDonut;//информация о записи VK Donut
 
     public int getCommentsId() {
         return commentsId;
@@ -109,35 +120,35 @@ public class Post {
         this.signerId = signerId;
     }
 
-    public int getCanPin() {
+    public boolean getCanPin() {
         return canPin;
     }
 
-    public void setCanPin(int canPin) {
+    public void setCanPin(boolean canPin) {
         this.canPin = canPin;
     }
 
-    public int getCanDelete() {
+    public boolean getCanDelete() {
         return canDelete;
     }
 
-    public void setCanDelete(int canDelete) {
+    public void setCanDelete(boolean canDelete) {
         this.canDelete = canDelete;
     }
 
-    public int getCanEdit() {
+    public boolean getCanEdit() {
         return canEdit;
     }
 
-    public void setCanEdit(int canEdit) {
+    public void setCanEdit(boolean canEdit) {
         this.canEdit = canEdit;
     }
 
-    public int getIsPinned() {
+    public boolean getIsPinned() {
         return isPinned;
     }
 
-    public void setIsPinned(int isPinned) {
+    public void setIsPinned(boolean isPinned) {
         this.isPinned = isPinned;
     }
 
@@ -236,16 +247,5 @@ public class Post {
     public void setPostDonut(PostDonut postDonut) {
         this.postDonut = postDonut;
     }
-
-    private PostComments postComment; //объект с информацией о комментариях к записи
-    private PostCopyright postCopyright;//объект с информацией об источнике материала(записи)
-    private PostLikes postLike; //объект с информацией о лайках к записи
-    private PostRepost postRepost;//объект с информацией о репостах записи («Рассказать друзьям»)
-    private PostViews postViews;//объект с информацией о просмотрах записи
-    private PostSource postSource;//объект с информацией о способе размещения записи
-//    private PostAttachments postAttachment;//объект с информацией о медиа вложениях записи, (array)
-    private PostGeo postGeo; //объект с информацией о местоположении
-//    private PostCopyHistory; //массив, содержащий историю репостов для записи (array)
-    private PostDonut postDonut;//информация о записи VK Donut
 
 }
